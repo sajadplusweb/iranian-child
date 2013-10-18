@@ -1,79 +1,438 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="stylesheet" href="http://ifont.ir/apicode/17">
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/idTabs.min.js"></script>
+    <script type="text/javascript" src="js/raphael-min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.js"></script>
+    <script src="js/iview.js"></script>
+    <script type="text/javascript" src="js/jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/totemticker.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/idtabs.min.js"></script> 
+    <title>انجمن خدمات فرهنگی ایرانیان</title>
+    <link rel="stylesheet" href="css/master.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/iview.css"/>
+    <link rel="stylesheet" href="css/slider-theme.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+         <script>
+            $(document).ready(function(){
+                $('#iview').iView({
+                    pauseTime: 7000,
+                    directionNav: false,
+                    controlNav: true,
+                    tooltipY: -15,
+					animationSpeed: 0,
+					fx: 'slide-in-left'
+                });
+            });
+        </script>
+</head>
+<body>
+    <div class="wrapper">
+        <!--========================== header =================================-->
+    	<header id="header">
+            <div class="container">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Iranian-child : iranian-child project" />
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="انجمن خدمات فرهنگی ایرانیان"/>
+                    </a>
+                </div>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+                <div class="lang">
+                    <ul>
+                        <li><a href="#" class="en">English</a></li>
+                        <li><a href="#" class="fa">فارسی</a></li>
+                    </ul>
+                </div>
 
-    <title>Iranian-child</title>
-  </head>
+                <nav class="navbar">
+                    <a href="index.html" class="home"></a>
+                    <ul>
+                        <li><a href="#">درباره ما</a></li>
+                        <li><a href="#">گالری</a></li>
+                        <li><a href="#">اخبار</a></li>
+                        <li><a href="#">تازه ها</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                        <li><a href="#">موسسه</a></li>
+                    </ul>
+                    <div class="searchbox">
+                        <input type="text" placeholder=""/>
+                    </div>
+                </nav>
 
-  <body>
+                <div class="slideshow">
+                    <div id="cont">
+                            <div id="iview">
+                                <div data-iview:image="img/slider/photo1.jpg">
+                                    <div class="slide">
+                                        <div class="iview-caption caption1" data-x="351" data-y="161" data-transition="wipeRight">
+                                            <h1>لورم ایپسوم متنی است که ساختگی</h1>
+                                        </div>
+                                        <div class="iview-caption" data-x="-16" data-y="192" data-transition="wipeLeft">
+                                            <p>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است. صنعت چاپ زمانی لازم بود شرایطی شما باید فکر ثبت نام و طراحی، لازمه خروج می باشد. در ضمن قاعده همفکری ها جوابگوی سئوالات زیاد شاید باشد.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/sajadplusweb/iranian-child">View on GitHub</a>
+                                <div data-iview:image="img/slider/photo5.jpg">
+                                    <div class="slide">
+                                        <div class="iview-caption caption1" data-x="351" data-y="161" data-transition="wipeRight">
+                                            <h1>لورم ایپسوم متنی است که ساختگی</h1>
+                                        </div>
+                                        <div class="iview-caption" data-x="-16" data-y="192" data-transition="wipeLeft">
+                                            <p>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است. صنعت چاپ زمانی لازم بود شرایطی شما باید فکر ثبت نام و طراحی، لازمه خروج می باشد. در ضمن قاعده همفکری ها جوابگوی سئوالات زیاد شاید باشد.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-          <h1 id="project_title">Iranian-child</h1>
-          <h2 id="project_tagline">iranian-child project</h2>
+                            </div>
+                    </div>
+                </div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/sajadplusweb/iranian-child/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/sajadplusweb/iranian-child/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+                <!--other news-->
+                <div class="news">
+                    <h3 class="title">سایر اخبار</h3>
+                    <ul id="vertical-ticker" class="other-news">
+                        <li>
+                            <a href="#">
+                                <div class="mask"><img src="img/plus.png" alt=""/></div>
+                                <img src="img/photo/test1.png" alt=""/>
+                            </a>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+                            <p>لورم ایپسوم متنی است که ساختگی  و چاپ آن مورد است. صنعت چاپ زمانی لازم بودمی باشد ...</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <div class="mask"><img src="img/plus.png" alt=""/></div>
+                                <img src="img/photo/test1.png" alt=""/>
+                            </a>
+                            <p>لورم ایپسوم متنی است که ساختگی و است. صنعت چاپ زمانی لازم بودمی باشد ...</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mask"><img src="img/plus.png" alt=""/></div>
+                                <img src="img/photo/test1.png" alt=""/>
+                            </a>
+                            <p>لورم ایپسوم متنی است که ساختگی و چاپ آن مورد است. صنعت چاپ ...</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mask"><img src="img/plus.png" alt=""/></div>
+                                <img src="img/photo/test1.png" alt=""/>
+                            </a>
+                            <p>لورم ایپسوم متنی است کهبرای طراحی و چاپ آن مورد است. صنعت چاپ زمانی لازم بودمی باشد ...</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mask"><img src="img/plus.png" alt=""/></div>
+                                <img src="img/photo/test1.png" alt=""/>
+                            </a>
+                            <p>لورم ایپسوم متنی است که برای طراحی و چاپ آن مورد است. صنعت چاپ زمانی لازم بودمی باشد ...</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mask"><img src="img/plus.png" alt=""/></div>
+                                <img src="img/photo/test1.png" alt=""/>
+                            </a>
+                            <p>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است. صنعت چاپ زمانی لازم بودمی باشد ...</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mask"><img src="img/plus.png" alt=""/></div>
+                                <img src="img/photo/test1.png" alt=""/>
+                            </a>
+                            <p>لورم ایپسوم متنی است که ساختگی برای طراحی و  صنعت چاپ زمانی لازم بودمی باشد ...</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end news -->
+                </div>
+                
+                
+    	</header>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+        <!--======================== content =============================-->
+        <section class="popular">
+            <div class="container">
+                <!--news section-->
+                <div class="wrapper-new">
+                    <h3 class="title">مطالب محبوب</h3>
+                    <ul>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+                        <li>
+                            <div class="news-text">
+                                <a href="#" class="fr" ><img src="img/photo/pop-1.jpg" alt=""/></a>
+                                <a href="#" class="w-290"><h3>حرف‌های پدرانه</h3></a>
+                                <p class="w-290">لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است. صنعت چاپ</p>
+                                <a href="#" class="read-more fl">ادامه&larr;</a>
+                            </div>
+                        </li>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+                        <li>
+                            <div class="news-text">
+                                <a href="#" class="fr" ><img src="img/photo/pop-1.jpg" alt=""/></a>
+                                <a href="#" class="w-290"><h3>حرف‌های پدرانه</h3></a>
+                                <p class="w-290">لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است. صنعت چاپ</p>
+                                <a href="#" class="read-more fl">ادامه&larr;</a>
+                            </div>
+                        </li>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+                        <li>
+                            <div class="news-text">
+                                <a href="#" class="fr" ><img src="img/photo/pop-1.jpg" alt=""/></a>
+                                <a href="#" class="w-290"><h3>حرف‌های پدرانه</h3></a>
+                                <p class="w-290">لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است. صنعت چاپ</p>
+                                <a href="#" class="read-more fl">ادامه&larr;</a>
+                            </div>
+                        </li>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+                        <li>
+                            <div class="news-text">
+                                <a href="#" class="fr" ><img src="img/photo/pop-1.jpg" alt=""/></a>
+                                <a href="#" class="w-290"><h3>حرف‌های پدرانه</h3></a>
+                                <p class="w-290">لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است. صنعت چاپ</p>
+                                <a href="#" class="read-more fl">ادامه&larr;</a>
+                            </div>
+                        </li>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+                    </ul>
+                    <!--====================== life style ======================-->
+                    <div class="life-style">
+                        <h3 class="title">سبک زندگی</h3>
+                        <ul>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+                            <!--big news-->
+                            <li>
+                                <div class="news-text big-news">
+                                    <a href="#" class="fr"><img src="img/photo/life-big.jpg" alt=""/></a>
+                                    <a href="#" class="fr-text-bg"><h3>حرف‌های پدرانه متنی است که ساختگی</h3></a>
+                                    <p class="fr-text-bg">لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است. صنعت چاپ زمانی لازم بود شرایطی شما باید فکر ثبت نام و طراحی، لازمه خروج می باشد. در ضمن قاعده همفکری ها جوابگوی سئوالات زیاد شاید باشد، آنچنان که لازم بود طراحی گرافیکی خوب بود. کتابهای زیادی،</p>
+                                    <a href="#" class="read-more">ادامه&larr;</a>
+                                </div>
+                            </li>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+                            <li>
+                                <div class="news-text life">
+                                    <a href="#" class="fr"><img src="img/photo/img-1.png" alt=""/></a>
+                                    <a href="#" class="fr-text"><h3>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.</h3></a>
+                                </div>
+                            </li>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+                            <li>
+                                <div class="news-text life">
+                                    <a href="#" class="fr"><img src="img/photo/img-1.png" alt=""/></a>
+                                    <a href="#" class="fr-text"><h3>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.</h3></a>
+                                </div>
+                            </li>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+                            <li>
+                                <div class="news-text life">
+                                    <a href="#" class="fr"><img src="img/photo/img-1.png" alt=""/></a>
+                                    <a href="#" class="fr-text"><h3>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.</h3></a>
+                                </div>
+                            </li>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Iranian-child maintained by <a href="https://github.com/sajadplusweb">sajadplusweb</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+                            <li>
+                                <div class="news-text life">
+                                    <a href="#" class="fr"><img src="img/photo/img-1.png" alt=""/></a>
+                                    <a href="#" class="fr-text"><h3>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.</h3></a>
+                                </div>
+                            </li>
 
-    
 
-  </body>
+                        </ul>
+                    </div>
+
+
+                    <!--====================== tuts ======================-->
+                    <div class="tuts">
+                        <h3 class="title">آموزش ها</h3>
+                        <ul>
+
+                            <!--big news-->
+                            <li>
+                                <div class="news-text big-news">
+                                    <a href="#" class="fr"><img src="img/photo/life-big.jpg" alt=""/></a>
+                                    <a href="#" class="fr-text-big"><h3>حرف‌های پدرانه متنی است که ساختگی</h3></a>
+                                    <p class="fr-text-bg">لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است. صنعت چاپ زمانی لازم بود شرایطی شما باید فکر ثبت نام و طراحی، لازمه خروج می باشد. در ضمن قاعده همفکری ها جوابگوی سئوالات زیاد شاید باشد، آنچنان که لازم بود طراحی گرافیکی خوب بود. کتابهای زیادی،</p>
+                                    <a href="#" class="read-more">ادامه&larr;</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="news-text life">
+                                    <a href="#" class="fr"><img src="img/photo/img-1.png" alt=""/></a>
+                                    <a href="#" class="fr-text"><h3>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.</h3></a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="news-text life">
+                                    <a href="#" class="fr"><img src="img/photo/img-1.png" alt=""/></a>
+                                    <a href="#" class="fr-text"><h3>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.</h3></a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="news-text life">
+                                    <a href="#" class="fr"><img src="img/photo/img-1.png" alt=""/></a>
+                                    <a href="#" class="fr-text"><h3>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.</h3></a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="news-text life">
+                                    <a href="#" class="fr"><img src="img/photo/img-1.png" alt=""/></a>
+                                    <a href="#" class="fr-text"><h3>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است.</h3></a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div> <!--end news-->
+
+                <!--sidebar-->
+                <aside class="sidebar">
+                    <!--social newtwork-->
+                    <div class="newsletter">
+                        <div class="social">
+                            <ul>
+                                <li><a href="#" class="rss"></a></li>
+                                <li><a href="#" class="facebook"></a></li>
+                                <li><a href="#" class="twitter"></a></li>
+                                <li><a href="#" class="google"></a></li>
+                                <li><a href="#" class="email"></a></li>
+                            </ul>
+                        </div>
+                        <hr class="hr">
+                        <div class="form">
+                            <h2>برای عضویت در خبرنامه ایمیل خود را وارد کنید.</h2>
+                            <input type="text" class="input-red"/>
+                            <input type="submit" value="عضویت" class="button">
+                        </div>
+                    </div>
+                    <!-- ============================= TAB =================================== -->
+                    <div class="game">
+                        <div id="usual1" class="usual"> 
+                            <ul id="tabs" class="top-tab"> 
+                                <li><a href="#tab1" class="selected">جوک و سرگرمی</a></li> 
+                                <li><a href="#tab2">بازی های آنلاین</a></li> 
+                            </ul> 
+                            <span class="fr">
+                                <div id="tab1">
+                                    <ul>
+                                        <li><a href="#">لورم ایپسوم متنی است که ساختگی برای </a></li>
+                                        <li><a href="#">لورم ایپسوم متنی است که ساختگی برای </a></li>
+                                        <li><a href="#">لورم ایپسوم متنی است که ساختگی برای </a></li>
+                                        <li><a href="#">لورم ایپسوم متنی است که ساختگی برای </a></li>
+                                        <li><a href="#">لورم ایپسوم متنی است که ساختگی برای </a></li>
+                                        <li><a href="#">لورم ایپسوم متنی است که ساختگی برای </a></li>
+                                        <li><a href="#">لورم ایپسوم متنی است که ساختگی برای </a></li>
+                                    </ul>
+                                </div> 
+                                <div id="tab2">
+                                    <ul>
+                                        <li>
+                                            <img src="img/photo/game.png" alt="">
+                                            <a href="#"><p>لورم ایپسوم متنی است که ساختگی برای </p></a>
+                                        </li>
+                                        <li>
+                                            <img src="img/photo/game.png" alt="">
+                                            <a href="#"><p>لورم ایپسوم متنی است که ساختگی برای </p></a>
+                                        </li>
+                                        <li>
+                                            <img src="img/photo/game.png" alt="">
+                                            <a href="#"><p>لورم ایپسوم متنی است که ساختگی برای </p></a>
+                                        </li>
+                                        <li>
+                                            <img src="img/photo/game.png" alt="">
+                                            <a href="#"><p>لورم ایپسوم متنی است که ساختگی برای </p></a>
+                                        </li>
+                                    </ul>
+                                </div> 
+                            </span>
+                        </div> 
+                    </div><!-- end game -->
+
+                    <div class="game">
+                        <div id="usual2" class="usual"> 
+                          <ul id="tabs" class="top-tab"> 
+                            <li><a href="#tabs1" class="selected">چند رسانه ای</a></li> 
+                            <li><a href="#tabs2" >تصاویر</a></li> 
+                            <li><a href="#tabs3" >صوت</a></li> 
+                          </ul>
+                            <span class="fr">
+                              <div id="tabs1">
+                                <a href="#">
+                                    <div class="mask"></div>
+                                    <img src="img/photo/video.jpg" alt=""><!-- image here -->
+                                </a>
+                                <p>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است</p>
+                                <div class="tumbnal">
+                                    <a href="#"><img src="img/photo/tumb-1.jpg" alt=""></a>
+                                    <a href="#"><img src="img/photo/tumb-2.jpg" alt=""></a>
+                                    <a href="#"><img src="img/photo/tumb-3.jpg" alt=""></a>
+                                </div>
+                              </div> <!-- end big video -->
+
+                              <div id="tabs2">
+                                 <div class="gallery">
+                                     <a href="#"><img src="img/photo/big-img.jpg" alt=""></a>
+                                     <p>لورم ایپسوم متنی است که ساختگی برای طراحی و چاپ آن مورد است</p>
+                                 </div>
+                                 <div class="tumbnal">
+                                    <a href="#"><img src="img/photo/tumb-1.jpg" alt=""></a>
+                                    <a href="#"><img src="img/photo/tumb-2.jpg" alt=""></a>
+                                    <a href="#"><img src="img/photo/tumb-3.jpg" alt=""></a>
+                                </div> 
+                              </div> 
+                              <div id="tabs3">
+                                  <ul class="playlist">
+                                      <li>لورم ایپسوم متنی است که ساختگی<a href="#" class="dl">دانلود &larr;</a></li>
+                                      <li>لورم ایپسوم متنی است که ساختگی<a href="#" class="dl">دانلود &larr;</a></li>
+                                      <li>لورم ایپسوم متنی است که ساختگی<a href="#" class="dl">دانلود &larr;</a></li>
+                                      <li>لورم ایپسوم متنی است که ساختگی<a href="#" class="dl">دانلود &larr;</a></li>
+                                      <li>لورم ایپسوم متنی است که ساختگی<a href="#" class="dl">دانلود &larr;</a></li>
+                                      <li>لورم ایپسوم متنی است که ساختگی<a href="#" class="dl">دانلود &larr;</a></li>
+                                  </ul>
+                              </div>
+                            </span> 
+                        </div> 
+                    </div>
+
+                </aside>
+            </div>
+        </section>
+        <!-- ============================= FOOTER =================================== -->
+        <div class="footer">
+            <div class="container">
+
+                <div class="backtop">
+                    <a href="" id="top"></a>
+                </div>
+                <div class="copyright">
+                    <p>تمامی حقوق این سایت متعلق به انجمن خدمات فرهنگی ایرانیان می باشد.</p>
+                </div>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#">صفحه اصلی</a></li>
+                        <li><a href="#">درباره ما</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- end footer -->
+
+
+
+
+    </div><!-- end wrapper -->
+</body>
 </html>
